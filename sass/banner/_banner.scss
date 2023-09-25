@@ -1,0 +1,57 @@
+@import "../variables";
+@import "../mixins/heading";
+@import "../mixins/para";
+@import "../mixins/line";
+
+// Banner Start
+#banner {
+  padding: 224px 0 70px 0;
+  background-color: rgb(255, 255, 255);
+  .banner_wrapper {
+    display: flex;
+    align-items: center;
+    .banner_content {
+      width: 720px;
+      h1 {
+        @include heading;
+        width: 720px;
+        margin-bottom: 40px;
+      }
+      p {
+        @include para;
+        width: 516px;
+        margin-bottom: 48px;
+        @include line;
+      }
+      form {
+        width: 630px;
+        padding: 37px 28px;
+        background-color: rgba(132, 84, 245, 0.05);
+        position: relative;
+        border-radius: 24px;
+        margin-top: 48px;
+        input {
+          width: 350px;
+          border: none;
+          outline: none;
+          background-color: transparent;
+          @include para;
+        }
+        button {
+          border: none;
+          cursor: pointer;
+          position: absolute;
+          right: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    .banner_img {
+      width: 690px;
+      position: relative;
+      left: 123px;
+    }
+  }
+}
+// Banner End

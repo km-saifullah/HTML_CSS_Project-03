@@ -1,0 +1,81 @@
+@import "../variables";
+@import "../mixins/center";
+@import "../mixins/heading";
+@import "../mixins/para";
+@import "../mixins/list";
+@import "../mixins/list_heading";
+
+#footer {
+  padding: 140px 0 57px 0;
+  .footer_wrapper {
+    display: flex;
+    column-gap: 212px;
+    .footer_details {
+      p {
+        @include para;
+        width: 450px;
+        padding-top: 44px;
+      }
+    }
+    .footer_list_wrapper {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 160px;
+      .feature-list {
+        h5 {
+          @include listHeading;
+          padding-bottom: 48px;
+        }
+        .footer-list {
+          @include list;
+        }
+        li a {
+          color: $primaryColor;
+        }
+      }
+      .support-list {
+        h5 {
+          @include listHeading;
+          padding-bottom: 48px;
+        }
+        .footer-list {
+          @include list;
+          li a {
+            color: $primaryColor;
+          }
+        }
+      }
+      .product-list {
+        h5 {
+          @include listHeading;
+          padding-bottom: 48px;
+        }
+        .footer-list {
+          @include list;
+        }
+        li a {
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    .copyright_text {
+      p {
+        @include para;
+      }
+    }
+    .privacy {
+      ul {
+        display: flex;
+        align-items: center;
+        column-gap: 60px;
+        @include para;
+      }
+    }
+  }
+}

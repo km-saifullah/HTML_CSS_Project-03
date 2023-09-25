@@ -1,0 +1,9 @@
+@import "../variables";
+
+@mixin plan_package($fontWeight,$color) {
+  font-size: $paragraphFontSize + 2px;
+  font-weight: $fontWeight;
+  line-height: 120%;
+  font-family: $secondaryFontFamily;
+  color: $color;
+}

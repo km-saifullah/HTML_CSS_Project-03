@@ -1,0 +1,98 @@
+@import "../variables";
+@import "../mixins/heading";
+@import "../mixins/para";
+@import "../mixins/line";
+
+// Solution Start
+#solution {
+  padding: 120px 0;
+  .solution_heading {
+    display: flex;
+    column-gap: 150px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    h2 {
+      @include heading;
+      width: 564px;
+      font-size: $primaryHeadingSize;
+    }
+    p {
+      @include para;
+      width: 696px;
+      @include line;
+    }
+  }
+  .solution_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    .solution_item {
+      width: 450px;
+      border-radius: 30px;
+      border: 1px solid rgba(132, 84, 245, 0.4);
+      padding: 24px 24px 48px 24px;
+      transition: all linear 0.3s;
+      .solution_item_head {
+        display: flex;
+        column-gap: 14px;
+        align-items: center;
+        margin-bottom: 16px;
+        h4 {
+          @include heading;
+          font-size: $paragraphFontSize + 10px;
+          transition: all linear 0.3s;
+        }
+        .icon_box {
+          height: 70px;
+          width: 70px;
+          background-color: rgba(254, 196, 95, 0.15);
+          border-radius: 14px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          i {
+            font-size: 30px;
+            color: #fec35f;
+            transition: all linear 0.3s;
+          }
+        }
+      }
+      p {
+        @include para;
+        width: 392px;
+        transition: all linear 0.3s;
+      }
+      a {
+        display: inline-block;
+        margin-top: 24px;
+        font-family: $secondaryFontFamily;
+        font-size: 20px;
+        text-transform: capitalize;
+        font-weight: 600;
+        color: $primaryColor;
+        line-height: 100%;
+        transition: all linear 0.3s;
+      }
+      &:hover {
+        background-color: $secondaryColor;
+        cursor: pointer;
+        .solution_item_head {
+          .icon_box {
+            color: #fff;
+            background-color: rgba(252, 252, 254, 0.15);
+            i {
+              color: #fff;
+            }
+          }
+        }
+        .solution_item_head h4,
+        p,
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+// Solution End

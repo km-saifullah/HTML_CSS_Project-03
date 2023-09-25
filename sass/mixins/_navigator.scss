@@ -1,0 +1,15 @@
+@import "../variables";
+@import "../mixins/center";
+
+@mixin navigation {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  background-color: #f3eefe;
+  @include center;
+  cursor: pointer;
+  transition: all linear 0.3s;
+  i {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,9 @@
+@import "../variables";
+
+@mixin listHeading {
+  color: $primaryColor;
+  font-size: $paragraphFontSize + 6px;
+  font-weight: 600;
+  line-height: 140%;
+  font-family: $primaryFontFamily;
+}

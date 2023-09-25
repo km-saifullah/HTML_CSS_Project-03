@@ -1,0 +1,81 @@
+@import "../variables";
+@import "../mixins/heading";
+@import "../mixins/para";
+
+// Counter Start
+#counter {
+    padding: 0px 0 75px 0;
+  .counter_main {
+    display: flex;
+    align-items: center;
+    column-gap: 220px;
+    .counter_icon {
+      display: flex;
+      align-items: center;
+      column-gap: 28px;
+      padding-left: 37px;
+      .counter_play-btn {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        background-color: #fec35f;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        i {
+          font-size: 55px;
+          color: #fff;
+        }
+        &:after {
+          position: absolute;
+          content: url("../../images/play_icon.png");
+          left: -24px;
+          top: -24px;
+        }
+      }
+      h4 {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 120%;
+        color: $primaryColor;
+        font-family: $secondaryFontFamily;
+        text-transform: capitalize;
+      }
+    }
+    .counter_wrapper {
+      display: flex;
+      align-items: center;
+      column-gap: 130px;
+      .counter_item {
+        position: relative;
+        h3 {
+          @include heading;
+          font-weight: 600;
+        }
+        p {
+          @include para;
+          width: 185px;
+          padding-top: 4px;
+        }
+        &:after {
+          position: absolute;
+          content: "";
+          right: -65px;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          background-color: #29313d;
+          opacity: 0.2;
+          width: 2px;
+          height: 100px;
+        }
+        &:last-child {
+          &:after {
+            content: unset;
+          }
+        }
+      }
+    }
+  }
+}
+// Counter End

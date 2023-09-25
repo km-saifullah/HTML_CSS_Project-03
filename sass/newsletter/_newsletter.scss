@@ -1,0 +1,63 @@
+@import "../variables";
+@import "../mixins/heading";
+@import "../mixins/para";
+@import "../mixins/center";
+
+#newsletter {
+  .newsletter_heading {
+    h3 {
+      @include heading;
+      font-size: $primaryHeadingSize + 2px;
+      width: 820px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .offer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 38px;
+      margin-top: 28px;
+      span {
+        @include para;
+        font-size: $paragraphFontSize + 2px;
+        position: relative;
+        &:after {
+          position: absolute;
+          content: "";
+          width: 2px;
+          height: 18px;
+          background-color: $primaryColor;
+          top: 50%;
+          transform: translateY(-50%);
+          right: -18px;
+          border-radius: 5px;
+        }
+        &:last-child {
+          &:after {
+            content: unset;
+          }
+        }
+      }
+    }
+  }
+  .newsletter_form {
+    @include center;
+    column-gap: 34px;
+    margin-top: 48px;
+    input {
+      width: 512px;
+      height: 80px;
+      border-radius: 18px;
+      padding: 24px;
+      background-color: #f3eefe;
+      border: none;
+      outline: none;
+      @include para;
+    }
+    button {
+      border: none;
+      cursor: pointer;
+    }
+  }
+}

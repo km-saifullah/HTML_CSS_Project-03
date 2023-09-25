@@ -1,0 +1,60 @@
+@import "../variables";
+@import "../mixins/heading";
+@import "../mixins/para";
+
+// Distribution List Start
+#list {
+  padding: 80px 0 120px 0;
+  .list_btn_wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(219, 204, 252, 0.2);
+    padding: 15px;
+    border-radius: 24px;
+    margin-bottom: 120px;
+    button {
+      background-color: transparent;
+      outline: 0;
+      border: none;
+      padding: 26px 63px;
+      line-height: 140%;
+      transition: all linear 0.3s;
+      color: #8454f5;
+      cursor: pointer;
+      &:hover,
+      &:active {
+        background-color: #8454f5;
+        color: #fff;
+      }
+    }
+  }
+  .list_wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 155px;
+    .list_img {
+      width: 542px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .list_content {
+        width: 665px;
+      h3 {
+        @include heading;
+        font-size: $primaryHeadingSize + 2px;
+        width: 690px;
+      }
+      p {
+        @include para;
+        padding: 24px 0 48px 0;
+        width: 575px;
+        line-height: 180%;
+      }
+    }
+  }
+}
+// Distribution List End

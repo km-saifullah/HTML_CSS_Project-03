@@ -1,0 +1,11 @@
+@import "../variables";
+
+// Common Paragraph Style
+@mixin para {
+  color: #29313d;
+  font-size: $paragraphFontSize;
+  font-weight: 400;
+  line-height: 200%;
+  font-family: $secondaryFontFamily;
+  text-transform: capitalize;
+}

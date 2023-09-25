@@ -1,0 +1,91 @@
+@import "../variables";
+@import "../mixins/heading";
+@import "../mixins/para";
+@import "../mixins/center";
+@import "../mixins/navigator";
+
+// Team Start
+#team {
+  padding: 140px 0;
+  .team_heading {
+    h3 {
+      @include heading;
+      font-size: $primaryHeadingSize;
+      width: 690px;
+    }
+  }
+  .team_wrapper {
+    display: flex;
+    column-gap: 60px;
+    align-items: center;
+    padding-top: 90px;
+    .team_img {
+      width: 450px;
+      height: 550px;
+      border-radius: 40px;
+      background-color: green;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .team_details {
+      width: 450px;
+      p {
+        @include para;
+        width: 446px;
+        font-size: $paragraphFontSize + 2px;
+      }
+      h5 {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 180%;
+        color: #29313d;
+        font-family: $primaryFontFamily;
+        padding: 20px 0 14px 0;
+      }
+      .team_social {
+        display: flex;
+        align-items: center;
+        column-gap: 24px;
+        .team_social-item {
+          height: 36px;
+          width: 36px;
+          border-radius: 50%;
+          border: 1px solid $secondaryColor;
+          transition: all linear 0.3s;
+          cursor: pointer;
+          @include center;
+          color: $secondaryColor;
+          &:hover {
+            background-color: $secondaryColor;
+            color: #fff;
+          }
+        }
+      }
+      .team_navigator {
+        display: flex;
+        column-gap: 24px;
+        align-items: center;
+        margin-top: 56px;
+        .preve {
+          @include navigation;
+          &:hover {
+            background-color: $secondaryColor;
+            color: #fff;
+          }
+        }
+        .next {
+          @include navigation;
+          &:hover {
+            background-color: $secondaryColor;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+// Team End

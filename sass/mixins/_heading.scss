@@ -1,0 +1,11 @@
+@import "../variables";
+
+// Common Heading Style
+@mixin heading {
+  font-size: $primaryHeadingSize + 10;
+  font-weight: 700;
+  font-family: $primaryFontFamily;
+  line-height: 140%;
+  color: $primaryColor;
+  text-transform: capitalize;
+}

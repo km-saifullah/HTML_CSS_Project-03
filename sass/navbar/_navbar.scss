@@ -1,0 +1,40 @@
+@import "../variables";
+@import "../mixins/commonBtn";
+// Navbar Start
+#navBar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 555;
+  padding: 30px 0;
+  .nav_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      width: 20%;
+    }
+    .menu {
+      width: 60%;
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 75px;
+        li a {
+          font-size: $paragraphFontSize;
+          color: $primaryColor;
+          font-weight: 600;
+          font-family: $primaryFontFamily;
+          text-transform: capitalize;
+        }
+      }
+    }
+    .nav_btn {
+      width: 20%;
+      text-align: right;
+    }
+  }
+}
+// Navbar End

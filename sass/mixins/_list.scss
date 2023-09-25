@@ -1,0 +1,18 @@
+@import "../variables";
+
+@mixin list {
+  color: $primaryColor;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: $secondaryFontFamily;
+  line-height: 120%;
+  text-transform: capitalize;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  a {
+    &:hover {
+      color: $secondaryColor;
+    }
+  }
+}

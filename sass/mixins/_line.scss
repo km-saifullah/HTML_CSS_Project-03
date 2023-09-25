@@ -1,0 +1,16 @@
+@import "./para";
+
+// Common Line Style
+@mixin line {
+  padding-left: 26px;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 6px;
+    background-color: #ffc556;
+  }
+}

@@ -1,0 +1,135 @@
+@import "../variables";
+@import "../mixins/heading";
+@import "../mixins/para";
+@import "../mixins/plan_package";
+
+// Plan Start
+#plan {
+  padding: 120px 0 164px 0;
+  .plan_heading {
+    width: 690px;
+    margin: 0 auto;
+    text-align: center;
+    h3 {
+      @include heading;
+      font-size: $primaryHeadingSize + 2px;
+      width: 690px;
+    }
+    .plan_swap {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      column-gap: 20px;
+      .swap_item {
+        font-family: $secondaryFontFamily;
+        font-size: $paragraphFontSize + 2px;
+        font-weight: 700;
+        text-transform: capitalize;
+        color: #000;
+        line-height: 100%;
+      }
+      .swap_btn {
+        width: 70px;
+        height: 40px;
+        background-color: $secondaryColor;
+        border-radius: 50px;
+        position: relative;
+        &:after {
+          position: absolute;
+          content: "";
+          height: 26px;
+          width: 26px;
+          border-radius: 50%;
+          background-color: #fff;
+          left: 7px;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+  .plan_wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    .plan_item {
+      width: 450px;
+      border-radius: 30px;
+      transition: all linear 0.3s;
+      margin-top: 160px;
+      padding: 48px;
+      .package_title {
+        font-size: 36px;
+        line-height: 140%;
+        font-weight: 700;
+        font-family: $primaryFontFamily;
+        color: #29313d;
+        text-transform: capitalize;
+      }
+      .package_details {
+        display: flex;
+        justify-content: space-between;
+        margin: 48px 0;
+        .package_name {
+          display: flex;
+          flex-direction: column;
+          row-gap: 28px;
+          li {
+            display: flex;
+            align-items: center;
+            column-gap: 14px;
+            i {
+              font-size: 20px;
+              color: #545a64;
+            }
+            span {
+              @include plan_package(400, #545a64);
+            }
+          }
+        }
+        .package_value {
+          display: flex;
+          flex-direction: column;
+          row-gap: 28px;
+          li {
+            @include plan_package(700, #8454f5);
+            text-align: right;
+          }
+        }
+      }
+      a {
+        border: none;
+        outline: none;
+        background-color: rgba(132, 84, 245, 0.1);
+        color: #8454f5;
+      }
+      &:hover {
+        margin-top: 80px;
+        background-color: #181059;
+        h4 {
+          color: #f8fafc;
+        }
+        a {
+          color: #f8fafc;
+          background-color: $secondaryColor;
+        }
+        .package_details {
+          .package_name li {
+            i {
+              color: #f8fafc;
+            }
+            span {
+              color: #f8fafc;
+            }
+          }
+          .package_value li {
+            color: #f8fafc;
+          }
+        }
+      }
+    }
+  }
+}
+// Plan End

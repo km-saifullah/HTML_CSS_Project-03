@@ -1,0 +1,19 @@
+@import "../variables";
+
+// Brand Start
+#brand {
+  padding: 0;
+  .brand_wrapper {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    .brand_item {
+      width: 210px;
+      height: 130px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+// Brand End
